@@ -1,3 +1,12 @@
+/* color variables */
+:root {
+    --salmonPink: #e98796;
+    --duskPink: #e9c2d4;
+    --lightPink: #efcfde;
+    --white: white;
+    --purple: #e2b4e3;
+  }
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,8 +18,8 @@
 header {
 
     padding: 20px;
-    background-color: salmon;
-    color: #ffffff;
+    background-color: var(--salmonPink);;
+    color: var(--white);
 }
 
 header h1 {
@@ -31,7 +40,7 @@ nav li {
 }
 
 li a {
-    color: #ffffff;
+    color: var(--white);
 }
 
 li a:link {
@@ -43,6 +52,44 @@ li a:hover {
     text-decoration-style: wavy;
 }
 
+/* Wavy shape between nav and hero */
+.container1 {
+    position: relative;
+    background: var(--salmonPink);
+    height: 14vh;
+  }
+  
+  .wave1 {
+    position: absolute;
+    height: 127px;
+    width: 100%;
+    background: var(--salmonPink);
+    bottom: 0;
+  }
+  
+  .wave1::before, .wave1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+  }
+  
+  .wave1::before {
+    width: 55%;
+    height: 109%;
+    background-color: var(--duskPink);
+    right: -1.5%;
+    top: 60%;
+  }
+  .wave1::after {
+    width: 55%;
+    height: 100%;
+    background-color: var(--salmonPink);
+    left: -1.5%;
+    top: 40%;
+  }
+/* End wavy shape */
+
 .hero {
     height: 800px;
     width: 100%;
@@ -50,3 +97,99 @@ li a:hover {
     background-size: cover;
 }
 /* End Header styling */
+
+/* Wavy shape pattern above about-me section */
+.container2 {
+    position: relative;
+    background: var(--lightPink);
+    height: 5vh;
+}
+  
+.wave2 {
+    position: absolute;
+    height: 127px;
+    width: 100%;
+    background: var(--lightPink);
+    bottom: 0;
+}
+  
+.wave2::before, .wave2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+  
+.wave2::before {
+    width: 55%;
+    height: 109%;
+    background-color: var(--purple);
+    right: -1.5%;
+    top: 60%;
+}
+.wave2::after {
+    width: 55%;
+    height: 100%;
+    background-color: var(--lightPink);
+    left: -1.5%;
+    top: 40%;
+}
+
+/* End wavy shape */
+
+section {
+    display: block;
+}
+
+/* About Me section styling */
+.about-me {
+    position: relative;
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 25px;
+    padding: 50px;
+    height: 300px;
+}
+
+.profile-pic {
+    max-height: 200px;
+    float: left;
+    margin-right: 25px;
+}
+/* Wavy shape */
+.container3 {
+    position: relative;
+    background: var(--purple);
+    height: 10vh;
+}
+  
+.wave3 {
+    position: absolute;
+    height: 127px;
+    width: 100%;
+    background: var(--purple);
+    bottom: 0;
+}
+  
+.wave3::before, .wave3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+  
+.wave3::before {
+    width: 55%;
+    height: 109%;
+    background-color: white;
+    right: -1.5%;
+    top: 60%;
+}
+.wave3::after {
+    width: 55%;
+    height: 100%;
+    background-color: var(--purple);
+    left: -1.5%;
+    top: 40%;
+}
+/* Wavy shape end */
