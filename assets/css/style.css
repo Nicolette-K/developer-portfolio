@@ -1,7 +1,7 @@
 /* color variables */
 :root {
-    --salmonPink: #e98796;
-    --duskPink: #e9c2d4;
+    --mint: #b2dbbd;
+    --caramel: #f5e8a9;
     --lightPink: #efcfde;
     --white: white;
     --purple: #e2b4e3;
@@ -17,15 +17,11 @@
 /* Begin Header styling, navbar, hero */
 header {
 
-    padding: 20px;
-    background-color: var(--salmonPink);;
+    /* padding: 20px; */
+    /* background-color: var(--salmonPink);; */
     color: var(--white);
 }
 
-header h1 {
-    display: inline-block;
-    font-size: 48px;
-}
 
 header nav {
     padding-top: 15px;
@@ -33,6 +29,19 @@ header nav {
     float: right;
     font-size: 30px;
 }
+
+/* .development-icon {
+    
+    height: 100px;
+    width: 100px;
+    background-image: url(../images/web-development-icon.png);
+}
+
+.icon {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+} */
 
 nav li {
     display: inline-block;
@@ -52,90 +61,17 @@ li a:hover {
     text-decoration-style: wavy;
 }
 
-/* Wavy shape between nav and hero */
-.container1 {
-    position: relative;
-    background: var(--salmonPink);
-    height: 14vh;
-  }
-  
-  .wave1 {
-    position: absolute;
-    height: 127px;
-    width: 100%;
-    background: var(--salmonPink);
-    bottom: 0;
-  }
-  
-  .wave1::before, .wave1::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-  }
-  
-  .wave1::before {
-    width: 55%;
-    height: 109%;
-    background-color: var(--duskPink);
-    right: -1.5%;
-    top: 60%;
-  }
-  .wave1::after {
-    width: 55%;
-    height: 100%;
-    background-color: var(--salmonPink);
-    left: -1.5%;
-    top: 40%;
-  }
-/* End wavy shape */
-
 .hero {
-    height: 800px;
-    width: 100%;
-    background-image: url(../images/pink-html-tags.jpg);
+    /* display: block; */
+    /* height: 900px;
+    width: 100%; */
+    background-image: url(../images/hero-image.jpg);
     background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
 }
 /* End Header styling */
-
-/* Wavy shape pattern above about-me section */
-.container2 {
-    position: relative;
-    background: var(--lightPink);
-    height: 5vh;
-}
-  
-.wave2 {
-    position: absolute;
-    height: 127px;
-    width: 100%;
-    background: var(--lightPink);
-    bottom: 0;
-}
-  
-.wave2::before, .wave2::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-}
-  
-.wave2::before {
-    width: 55%;
-    height: 109%;
-    background-color: var(--purple);
-    right: -1.5%;
-    top: 60%;
-}
-.wave2::after {
-    width: 55%;
-    height: 100%;
-    background-color: var(--lightPink);
-    left: -1.5%;
-    top: 40%;
-}
-
-/* End wavy shape */
 
 section {
     display: block;
@@ -144,7 +80,7 @@ section {
 /* About Me section styling */
 .about-me {
     position: relative;
-    background-color: var(--purple);
+    background-color: var(--mint);
     color: var(--white);
     font-size: 25px;
     padding: 50px;
@@ -156,40 +92,147 @@ section {
     float: left;
     margin-right: 25px;
 }
-/* Wavy shape */
-.container3 {
+
+.contact-me {
     position: relative;
-    background: var(--purple);
-    height: 10vh;
+    background-color: var(--mint);
+    color: var(--white);
+    font-size: 25px;
+    padding: 50px;
+    height: 300px;
 }
-  
-.wave3 {
-    position: absolute;
-    height: 127px;
-    width: 100%;
-    background: var(--purple);
-    bottom: 0;
+
+/* Portfolio section styling */
+.portfolio {
+    background-color: var(--caramel);
+    color: var(--white);
+    font-size: 25px;
+    padding: 50px;
+    margin: 0;
+	display: flex;
+	align-items: center;
 }
-  
-.wave3::before, .wave3::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
+
+.slider {
+	width: 100%;
 }
-  
-.wave3::before {
-    width: 55%;
-    height: 109%;
-    background-color: white;
-    right: -1.5%;
-    top: 60%;
+.slider input {
+	display: none;
 }
-.wave3::after {
-    width: 55%;
-    height: 100%;
-    background-color: var(--purple);
-    left: -1.5%;
-    top: 40%;
+.projects {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 350px;
+	perspective: 1000px;
+	overflow: hidden;
 }
-/* Wavy shape end */
+.projects .item {
+	width: 450px;
+	padding: 30px;
+	border-radius: 5px;
+	background-color: var(--mint);
+	position: absolute;
+	top: 0;
+	box-sizing: border-box;
+	text-align: center;
+	transition: transform 0.4s;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	user-select: none;
+	cursor: pointer;
+}
+.projects .item img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 13px solid #3B344D;
+}
+.projects .item div {
+	color: darkblue;
+}
+.projects .item h2 {
+	font-size: 14px;
+}
+.dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.dots label {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: var(--mint);
+	margin: 7px;
+	transition-duration: 0.2s;
+}
+
+#t-1:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-4"],
+#t-5:checked ~ .dots label[for="t-5"] {
+	transform: scale(2);
+	background-color: #fff;
+}
+#t-1:checked ~ .dots label[for="t-2"],
+#t-2:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-3"],
+#t-3:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-4"],
+#t-4:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-5"],
+#t-5:checked ~ .dots label[for="t-4"] {
+	transform: scale(1.5);
+}
+#t-1:checked ~ .projects label[for="t-5"] {
+	transform: translate3d(1200px, 0, -360px) rotateY(-45deg);
+}
+#t-1:checked ~ .projects label[for="t-4"],
+#t-2:checked ~ .projects label[for="t-5"] {
+	transform: translate3d(900px, 0, -270px) rotateY(-35deg);
+	z-index: 1;
+}
+#t-1:checked ~ .projects label[for="t-3"],
+#t-2:checked ~ .projects label[for="t-4"],
+#t-3:checked ~ .projects label[for="t-5"] {
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+}
+#t-1:checked ~ .projects label[for="t-2"],
+#t-2:checked ~ .projects label[for="t-3"],
+#t-3:checked ~ .projects label[for="t-4"],
+#t-4:checked ~ .projects label[for="t-5"] {
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+}
+#t-2:checked ~ .projects label[for="t-1"],
+#t-3:checked ~ .projects label[for="t-2"],
+#t-4:checked ~ .projects label[for="t-3"],
+#t-5:checked ~ .projects label[for="t-4"] {
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+}
+#t-3:checked ~ .projects label[for="t-1"],
+#t-4:checked ~ .projects label[for="t-2"],
+#t-5:checked ~ .projects label[for="t-3"] {
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+}
+#t-5:checked ~ .projects label[for="t-2"],
+#t-4:checked ~ .projects label[for="t-1"] {
+	transform: translate3d(-900px, 0, -270px) rotateY(35deg);
+}
+#t-5:checked ~ .projects label[for="t-1"] {
+	transform: translate3d(-1200px, 0, -360px) rotateY(45deg);
+}
+#t-1:checked ~ .projects label[for="t-1"],
+#t-2:checked ~ .projects label[for="t-2"],
+#t-3:checked ~ .projects label[for="t-3"],
+#t-4:checked ~ .projects label[for="t-4"],
+#t-5:checked ~ .projects label[for="t-4"],
+#t-5:checked ~ .projects label[for="t-5"] {
+	z-index: 4;
+}
