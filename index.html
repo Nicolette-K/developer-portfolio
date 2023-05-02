@@ -12,41 +12,151 @@
 <body>
     <!-- header -->
     <header>
-        <!-- title -->
-        <h1>Nicole's Portfolio</h1>
-        <!-- navbar -->
+        
+        <div>
+            
+        </div>
+
         <nav>
+            <figure class="development-icon">
+                <img class="icon"/>
+            </figure>
             <ul>
-                <li><a href="#">About Me</a> </li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact-me">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <section class="container1">
-        <div class="wave1"></div>
-    </section>
-
     <!-- hero image -->
     <figure class="hero"></figure>
 
-    <section class="container2">
-        <div class="wave2"></div>
-    </section>
-
     <main>
-        <section class="about-me">
+        <!-- About Me section -->
+        <section class="about-me" id="about-me">
             <article class="about-me-card">
                 <img class="profile-pic" src="./assets/images/profile.jpg" alt="Profile picture"/>
                 <h2>Greetings!</h2>
-                <p class="about-desc">My name is Nicole. I am an aspiring Web Developer. I'm a Software QA Analyst by day and Full Stack bootcamp student by night. I'm very detail oriented and passionate about building high-quality software for the world to use!</p>
+                <p class="about-desc">My name is Nicole. I am a detail-oriented Web Developer with a passion for building high-quality software for the world to use!</p>
             </article>
         </section>
-
-        <section class="container3">
-            <div class="wave3"></div>
+        <!-- Portfolio section -->
+        <section class="portfolio" id="portfolio">
+            <div class="slider">
+                <h3>Portfolio</h3>
+                <input type="radio" name="project" id="t-1" checked>
+                <input type="radio" name="project" id="t-2">
+                <input type="radio" name="project" id="t-3">
+                <div class="projects">
+                    <label class="item" for="t-1">
+                        <a href="https://jtruehitt.github.io/Do_You_Even_Trivia_Bro/" target="_blank" class="flex-item trivia-bro">
+                            <div>
+                              <h3>Trivia Game</h3>
+                              <span>Featuring Javascript</span>
+                            </div>
+                        </a>
+                    </label>
+                    <label class="item" for="t-2">
+                        <a href="https://nicolette-k.github.io/password-generator-web-app/" target="_blank" class="flex-item pass-gen">
+                            <div>
+                              <h3>Password Generator</h3>
+                              <span>Featuring Javascript</span>
+                            </div>
+                        </a>
+                    </label>
+                    <label class="item" for="t-3">
+                        <a href="https://github.com/Nicolette-K/horiseon-web-app" target="_blank" class="flex-item horiseon-web">
+                            <div>
+                              <h3>Marketing Web App</h3>
+                              <span>Featuring Javascript</span>
+                            </div>
+                          </a>
+                    </label>
+                </div>
+                <div class="dots">
+                    <label for="t-1"></label>
+                    <label for="t-2"></label>
+                    <label for="t-3"></label>
+                </div>
+            </div>
+            
+                <!-- <div class="flex-container">
+                    <a href="https://jtruehitt.github.io/Do_You_Even_Trivia_Bro/" target="_blank" class="flex-item trivia-bro">
+                        <div>
+                          <h3>Trivia Game</h3>
+                          <span>Featuring Javascript</span>
+                        </div>
+                      </a>
+                      <a href="https://nicolette-k.github.io/password-generator-web-app/" target="_blank" class="flex-item pass-gen">
+                        <div>
+                          <h3>Password Generator</h3>
+                          <span>Featuring Javascript</span>
+                        </div>
+                      </a>
+                      <a href="https://github.com/Nicolette-K/horiseon-web-app" target="_blank" class="flex-item horiseon-web">
+                        <div>
+                          <h3>Marketing Web App</h3>
+                          <span>Featuring Javascript</span>
+                        </div>
+                      </a>
+                </div> -->
+        </section>
+        <!-- Contact section -->
+        <section class="contact-me" id="contact-me">
+            <article class="contact">
+                <h4>Contact</h4>
+            </article>
         </section>
     </main>
+    <footer>
+        <h5>In order to be irreplaceable, one must always be different” – Coco Chanel.
+        </h5>
+        <p>Handemade by me</p>
+    </footer>
 </body>
 </html>
+
+<!-- 
+    <div class="slider">
+		<input type="radio" name="testimonial" id="t-1">
+		<input type="radio" name="testimonial" id="t-2">
+		<input type="radio" name="testimonial" id="t-3" checked>
+		<input type="radio" name="testimonial" id="t-4">
+		<input type="radio" name="testimonial" id="t-5">
+		<div class="testimonials">
+			<label class="item" for="t-1">
+				<img src="https://dummyimage.com/150" alt="picture">
+				<p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+				<h2>- Princy, Web Developer</h2>
+			</label>
+			<label class="item" for="t-2">
+				<img src="https://dummyimage.com/150" alt="picture">
+				<p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+				<h2>- Princy, Web Developer</h2>
+			</label>
+			<label class="item" for="t-3">
+				<img src="https://dummyimage.com/150" alt="picture">
+				<p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+				<h2>- Princy, Web Developer</h2>
+			</label>
+			<label class="item" for="t-4">
+				<img src="https://dummyimage.com/150" alt="picture">
+				<p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+				<h2>- Princy, Web Developer</h2>
+			</label>
+			<label class="item" for="t-5">
+				<img src="https://dummyimage.com/150" alt="picture">
+				<p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+				<h2>- Princy, Web Developer</h2>
+			</label>
+		</div>
+		<div class="dots">
+			<label for="t-1"></label>
+			<label for="t-2"></label>
+			<label for="t-3"></label>
+			<label for="t-4"></label>
+			<label for="t-5"></label>
+		</div>
+	</div>
+ -->
