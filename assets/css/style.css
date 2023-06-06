@@ -29,6 +29,9 @@ nav li {
 
 li a {
     color: white;
+	background-color: var(--mint);
+	border: 2px solid white;
+	padding: 0.5em;
 }
 
 li a:link {
@@ -37,7 +40,7 @@ li a:link {
 
 li a:hover {
     text-decoration: underline;
-    text-decoration-style: wavy;
+    text-decoration-style: solid;
 }
 
 .hero {
@@ -55,18 +58,46 @@ section {
 
 /* About Me section styling */
 .about-me {
-    position: relative;
     background-color: var(--mint);
-    color: var(--white);
+    color: black;
     font-size: 25px;
     padding: 50px;
-    height: 300px;
+    margin: 0;
+	display: flex;
+	align-items: center;
+	min-height: 60vh;
+}
+
+h2 {
+	/* float: right; */
+	margin-left: 5em;
+	font-size: 1.17em;
+	width: 20vw;
+	text-align: center;
+	padding: 1em;
+	background-color: var(--caramel);
+    color: black;
+	border: 2px solid black;
+	margin-bottom: 1em;
+}
+
+.floatRight {
+	float: right;
+	margin-left: 10em;
 }
 
 .profile-pic {
-    max-height: 200px;
-    float: left;
-    margin-right: 25px;
+    max-height: 35vh;
+	border-radius: 15px 50px 30px;
+	border: 2px solid black;
+}
+
+.about-desc {
+	font-size: 1.2em;
+	width: 40vw;
+	background-color: var(--caramel);
+	padding: 1em;
+	border: 2px solid black;
 }
 
 /* Portfolio section styling */
@@ -146,6 +177,7 @@ button {
 }
 .item {
 	width: 52vw;
+	border: 2px solid black;
 	border-radius: 5px;
 	background-color: var(--mint);
 	position: absolute;
