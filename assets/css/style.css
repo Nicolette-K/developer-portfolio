@@ -2,9 +2,7 @@
 :root {
     --mint: #b2dbbd;
     --caramel: #f5e8a9;
-    --lightPink: #efcfde;
     --white: white;
-    --purple: #e2b4e3;
   }
 
 * {
@@ -63,27 +61,33 @@ section {
     font-size: 25px;
     padding: 50px;
     margin: 0;
-	display: flex;
-	align-items: center;
-	min-height: 60vh;
+	height: 100vh;
+    width: 100vw;
 }
 
 h2 {
-	/* float: right; */
-	margin-left: 5em;
+	float: right;
 	font-size: 1.17em;
 	width: 20vw;
 	text-align: center;
 	padding: 1em;
 	background-color: var(--caramel);
-    color: black;
+    color: white;
 	border: 2px solid black;
-	margin-bottom: 1em;
+	/* margin-bottom: 20em; */
 }
 
-.floatRight {
-	float: right;
-	margin-left: 10em;
+.row {
+	display: flex;
+}
+  
+.column {
+	flex: 50%;
+	background-color: var(--caramel);
+	margin-top: 10em;
+	align-items: center;
+	padding: 1em;
+	border-radius: 15px;
 }
 
 .profile-pic {
@@ -97,7 +101,7 @@ h2 {
 	width: 40vw;
 	background-color: var(--caramel);
 	padding: 1em;
-	border: 2px solid black;
+	margin-top: 1em;
 }
 
 /* Portfolio section styling */
@@ -107,8 +111,10 @@ h2 {
     font-size: 25px;
     padding: 50px;
     margin: 0;
-	display: flex;
+	/* display: flex; */
 	align-items: center;
+	height: 100vh;
+    width: 100vw;
 }
 
 h3 {
@@ -126,16 +132,48 @@ h3 {
 }
 
 button {
-	background-color: var(--caramel);
+	background-color: var(--mint);
 	border: none;
 	color: black;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
-	border: 2px solid black;
-  }
+	font-size: 0.9em;
+	border: 5px solid var(--caramel);
+	overflow: hidden;
+	transition: .2s transform ease-in-out;
+	will-change: transform;
+	z-index: 0;
+}
+  
+button:after {
+    background-color: var(--caramel);
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+    
+button:hover::after {
+	transform: translate(0, 0);
+}
+    
+button:hover {
+    border: 5px solid transparent;
+    color: black;
+    transform: scale(1.05);
+    will-change: transform;
+    
+}
 .trivia {
 	background-image: url("../images/trivia-game-preview.png");
     background-size: cover;
@@ -275,10 +313,170 @@ button {
 
 /* Contact Me section styling */
 .contact-me {
-    position: relative;
     background-color: var(--mint);
     color: var(--white);
     font-size: 25px;
-    padding: 50px;
-    height: 300px;
+	/* display: flex; */
+	/* align-items: center; */
+	padding: 50px;
+    margin: 0;
+	height: 100vh;
+    width: 100vw;
 }
+
+h5 {
+	float: right;
+	font-size: 1.17em;
+	width: 20vw;
+	text-align: center;
+	padding: 1em;
+	background-color: var(--caramel);
+    color: white;
+	border: 2px solid black;
+	margin-bottom: 1em;
+	
+}
+
+#all {
+	display: inline-block;
+	margin-left: 4em;
+	margin-top: 3em;
+}
+
+/* generic css */
+
+.view {
+	/* margin: 10px; */
+	float: left;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	cursor: default;
+	background: none url(../images/bgimg.jpg) no-repeat center center;
+}
+  
+  .view .mask,
+  .view .content {
+	width: 15em;
+	height: 15em;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0
+  }
+  
+  
+  .view p {
+	padding: 2em;
+	text-align: center
+  }
+  
+  .view a.info {
+	display: inline-block;
+	text-decoration: none;
+	padding: 7px 14px;
+	background: #000;
+	color: #fff;
+	font-family: Raleway, serif;
+	text-transform: uppercase;
+	box-shadow: 0 0 1px #000
+  }
+  
+  .view a.info:hover {
+	box-shadow: 0 0 5px #000
+  }
+  
+  
+  /*1*/
+  
+  .view-first img {
+	/*1*/
+	transition: all 0.2s linear;
+	width: 15em;
+	height: 15em;
+	margin-top: 1em;
+  }
+  
+  .view-first .mask {
+	opacity: 0;
+	background-color: rgba(244, 230, 157, 0.683);
+	transition: all 0.4s ease-in-out;
+	width: 15em;
+	height: 15em;
+  }
+
+  .view-second img {
+	/*1*/
+	transition: all 0.2s linear;
+	width: 15em;
+	height: 15em;
+	margin-top: 1em;
+  }
+  
+  .view-second .mask {
+	opacity: 0;
+	background-color: rgba(244, 230, 157, 0.683);
+	transition: all 0.4s ease-in-out;
+	width: 14em;
+	height: 15em;
+  }
+
+  .view-third img {
+	/*1*/
+	transition: all 0.2s linear;
+	width: 12em;
+	height: 13.5em;
+	margin-top: 1em;
+  }
+  
+  .view-third .mask {
+	opacity: 0;
+	background-color: rgba(244, 230, 157, 0.683);
+	transition: all 0.4s ease-in-out;
+	width: 16em;
+	height: 16em;
+  }
+  
+  .view p {
+	transform: translateY(100px);
+	opacity: 0;
+	transition: all 0.2s linear;
+	color: black;
+  }
+  
+  .view a.info {
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+  }
+  
+  
+  /* */
+  
+  .view:hover img {
+	transform: scale(1.1);
+  }
+  
+  .view:hover .mask {
+	opacity: 1;
+  }
+  
+  .view:hover p,
+  .view:hover a.info {
+	opacity: 1;
+	transform: translateY(0px);
+  }
+  
+  .view:hover p {
+	transition-delay: 0.1s;
+  }
+  
+
+  .hint {
+	font-size: 3.5em;
+	margin-left: 6em;
+	border-radius: 15px;
+	background-color: var(--white);
+	width: 20vw;
+	color: var(--mint);
+	text-align: center;
+  }
